@@ -38,14 +38,14 @@ namespace DriveMap
             process.WaitForExit();
 
             // ****
-            string path = @"\\conc.students.local\student";
+            string path = # Path of your drive;
 
             var pro = new Process();
             var psi = new ProcessStartInfo
             {
                 //WindowStyle = ProcessWindowStyle.Hidden,
                 FileName = "net.exe",
-                Arguments = "USE " + letter + ": " + path + @" /USER:CONC\" + userinput
+                Arguments = "USE " + letter + ": " + path + @" #USERNAME" + userinput
             };
             pro.StartInfo = psi;
             pro.Start();
